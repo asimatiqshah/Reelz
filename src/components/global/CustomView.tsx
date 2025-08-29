@@ -1,0 +1,31 @@
+// import { FC, ReactNode } from 'react';
+// import { StyleSheet, View, ViewStyle } from 'react-native';
+// import { Colors } from '../../constants/Colors';
+
+import { StyleSheet, View, ViewStyle } from "react-native"
+import { Colors } from "../../constants/Colors"
+import React, { FC, ReactNode } from "react"
+
+// 1.ReactNode = ya kuch bhi hosakta ha (text,image,view etc)
+
+
+interface CustomViewProps {
+  children:ReactNode,
+  style? : ViewStyle
+}
+
+
+const CustomView:FC<CustomViewProps> = ({children,style})=>{
+  return(
+    <View style={[styles.container,style]}>{children}</View>
+  )
+}
+
+export default CustomView;
+
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    backgroundColor: Colors.background,
+  }
+})

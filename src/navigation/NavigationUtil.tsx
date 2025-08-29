@@ -37,3 +37,7 @@ export const push = async(routeName:string,params?:object)=>{
     )
    } 
 }
+
+export const prepareNavigation = async()=>{
+    await navigationRef.isReady();
+}
